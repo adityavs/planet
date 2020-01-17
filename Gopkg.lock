@@ -354,7 +354,7 @@
 
 [[projects]]
   branch = "dmitri/6.1.x/3224-selinux"
-  digest = "1:9dd1860a32e158f6f368fc1f63256bdfd401aac0c529310ca76e34c3588c963b"
+  digest = "1:5b1e8470c38a940bd629a9531259e07757ea298a5d1937bcdfe8cd37ca401140"
   name = "github.com/gravitational/satellite"
   packages = [
     "agent",
@@ -369,7 +369,7 @@
     "utils",
   ]
   pruneopts = "UT"
-  revision = "cfbf275c6b42fdea386fb30bdcb630e6361f6220"
+  revision = "df4520bc0a245a1d131644f15a11842a05060bf1"
 
 [[projects]]
   digest = "1:3afdc8c5bad39bda75ede9cd18bf590c385ff9a28c742f7330e3d3e19c685c47"
@@ -743,16 +743,16 @@
   version = "v0.9.0"
 
 [[projects]]
-  branch = "dmitri/update-upstream"
-  digest = "1:68881bada573c001a65c7d3dd5f0d52301204d05b981cf5c030662728871b251"
+  digest = "1:7eb9685a010202bad7133819945fdae3773630398b7211defb3c1b81d3ec8233"
   name = "github.com/sirupsen/logrus"
   packages = [
     ".",
     "hooks/syslog",
   ]
   pruneopts = "UT"
-  revision = "b1b7578d8a6f702e625185029eab4922c4cb2a77"
+  revision = "9ebd8dcf727178553227307b785304594abef057"
   source = "github.com/gravitational/logrus"
+  version = "v1.4.3-alpha.1"
 
 [[projects]]
   digest = "1:c1b1102241e7f645bc8e0c22ae352e8f0dc6484b6cb4d132fa9f24174e0119e2"
@@ -1218,6 +1218,7 @@
     "github.com/opencontainers/runc/libcontainer/user",
     "github.com/opencontainers/runc/libcontainer/utils",
     "github.com/opencontainers/runtime-spec/specs-go",
+    "github.com/opencontainers/selinux/go-selinux",
     "github.com/pborman/uuid",
     "github.com/prometheus/client_golang/prometheus",
     "github.com/sirupsen/logrus",
