@@ -117,7 +117,7 @@ func Int32Ptr(v int32) *int32 {
 // ExitStatusFromError returns the exit status from the specified error.
 // If the error is not exit status error, return nil
 func ExitStatusFromError(err error) *int {
-	exitErr, ok := err.(*exec.ExitError)
+	exitErr, ok := trace.Unwrap(err).(*exec.ExitError)
 	if !ok {
 		return nil
 	}
