@@ -32,18 +32,19 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/fatih/color"
-	"github.com/gravitational/configure/cstrings"
 	"github.com/gravitational/planet/lib/box"
 	"github.com/gravitational/planet/lib/monitoring"
 	"github.com/gravitational/planet/test/e2e"
 
+	"github.com/fatih/color"
 	kv "github.com/gravitational/configure"
+	"github.com/gravitational/configure/cstrings"
 	etcdconf "github.com/gravitational/coordinate/config"
 	"github.com/gravitational/satellite/agent"
 	"github.com/gravitational/satellite/agent/backend/inmemory"
 	"github.com/gravitational/trace"
 	"github.com/gravitational/version"
+	serf "github.com/hashicorp/serf/client"
 	"github.com/opencontainers/runc/libcontainer/configs"
 	"github.com/opencontainers/selinux/go-selinux"
 	log "github.com/sirupsen/logrus"
@@ -287,7 +288,7 @@ func run() error {
 		conf := &agent.Config{
 			Name:        *cagentName,
 			RPCAddrs:    *cagentRPCAddrs,
-			SerfRPCAddr: *cagentSerfRPCAddr,
+			SerfConfig:  serf.Config{Addr: *cagentSerfRPCAddr},
 			MetricsAddr: *cagentMetricsAddr,
 			Cache:       cache,
 			CAFile:      *cagentEtcdCAFile,
