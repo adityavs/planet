@@ -367,7 +367,6 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "dmitri/6.1.x/3224-selinux"
   digest = "1:3a7cdc27707b6d09dba586137f36b52d55cd0e10c6e086439714835b3ec64414"
   name = "github.com/gravitational/satellite"
   packages = [
@@ -388,7 +387,8 @@
     "utils",
   ]
   pruneopts = "UT"
-  revision = "25d05a6280bdb7bbb47406b47e39bc48c4118850"
+  revision = "be4222379ab644c907599b15896657255271fcc1"
+  version = "6.1.4"
 
 [[projects]]
   digest = "1:3afdc8c5bad39bda75ede9cd18bf590c385ff9a28c742f7330e3d3e19c685c47"
@@ -1245,6 +1245,7 @@
     "github.com/gravitational/satellite/agent/health",
     "github.com/gravitational/satellite/agent/proto/agentpb",
     "github.com/gravitational/satellite/cmd",
+    "github.com/gravitational/satellite/lib/rpc/client",
     "github.com/gravitational/satellite/monitoring",
     "github.com/gravitational/satellite/monitoring/collector",
     "github.com/gravitational/trace",
